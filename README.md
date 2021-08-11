@@ -16,7 +16,7 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 
 ##  Overview
 ###  The Challenge
-According to Frontend Masters:
+According to Frontend Mentor:
 
 >Users should be able to: 
 >- View the optimal layout for the site depending on their device's screen size. 
