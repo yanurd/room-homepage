@@ -10,7 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/index.css"
+      media="screen and (max-width: 480px)"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -46,7 +50,12 @@
     <main>
       <section class="container">
         <div class="container-img">
-          <img src="./static/img/desktop-image-hero-1.jpg" alt="White chair" />
+          <picture>
+            <source media="(max-width: 799px )" srcset="./static/img/mobile-image-hero-1.jpg">
+            <source media="(min-width: 800px)" srcset="./static/img/desktop-image-hero-1.jpg">
+            <img src="./static/img/mobile-image-hero-1.jpg" alt="White chair" />
+          </picture>
+          
         </div>
         <div class="container-buttons">
           <div>
