@@ -53,7 +53,6 @@ main {
   grid-template: 
     repeat(auto-fit, 1fr) / 
     repeat(auto-fit, 1fr);
-  height: 100%;
 }
 
 .container-img {
@@ -70,16 +69,12 @@ main {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  transform: translateY(-57px);
 }
 
-.container-buttons > div {
-  display: flex;
-  position: absolute;
-}
-
-.container-buttons > div > a {
+.container-buttons a {
   background-color: var(--black);
-  padding: 14px;
+  padding: 15px;
 }
 
 .content > div {
