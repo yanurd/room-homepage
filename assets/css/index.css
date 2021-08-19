@@ -51,13 +51,12 @@ nav ul a {
 main {
   display: grid;
   grid-template: 
-    repeat(auto-fit, minmax(320px, 1fr)) / 
-    repeat(auto-fit, minmax(320px, 1fr));
+    repeat(auto-fit, 1fr) / 
+    repeat(auto-fit, 1fr);
   height: 100%;
 }
 
 .container-img {
-  /* width: 96%; */
   height: 100%;
 }
 
@@ -70,7 +69,7 @@ main {
 .container-buttons {
   display: flex;
   align-items: flex-end;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .container-buttons > div {
@@ -82,11 +81,7 @@ main {
   background-color: var(--black);
   padding: 14px;
 }
-/* .content {
-  grid-area: 1 / 3 / 3 / 3;
-  align-self: center;
-  padding: 0 2rem;
-} */
+
 .content > div {
   padding: 5rem;
 }
@@ -162,16 +157,4 @@ main {
 .container-buttons > div > a:hover {
   background-color: var(--light-gray);
   transition: background-color 0.2s ease-in-out;
-}
-
-/* Media Queries */
-@media all and (min-width: 1240px) {
-  .content {
-    padding: 0;
-  }
-
-  .content-header h2 {
-    font-size: 2.8rem;
-    line-height: 1.3;
-  }
 }
