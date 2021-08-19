@@ -149,7 +149,7 @@ main {
 .content-buttons a:hover img {
   color: var(--light-gray);
 }
-.container-buttons > div > a:hover {
+.container-buttons a:hover {
   background-color: var(--light-gray);
   transition: background-color 0.2s ease-in-out;
 }
