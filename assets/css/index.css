@@ -31,6 +31,10 @@ nav {
   z-index: 1;
 }
 
+a{
+  --webkit-tap-hightlight-color: transparent;
+}
+
 .menu-btn {
   display: none;
 }
@@ -89,7 +93,7 @@ nav {
   background: var(--white);
   width: 100%;
   height: inherit;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .menu-btn:checked ~ .menu a:first-child {
@@ -112,7 +116,7 @@ nav {
   height: 13px;
 }
 .menu-btn:checked ~ .menu .underline::after,
-.menu-btn:checked ~ .menu .underline::before{
+.menu-btn:checked ~ .menu .underline::before {
   border-bottom: 2px solid var(--very-dark-gray);
 }
 
@@ -152,7 +156,7 @@ main {
 }
 .main {
   opacity: 0.7;
-  transition: opacity .3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 .container-img {
   height: 100%;
