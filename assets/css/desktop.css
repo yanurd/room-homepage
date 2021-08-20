@@ -1,6 +1,7 @@
 main {
   display: grid;
-  grid-template: repeat(2, minmax(320px, 1fr)) / repeat(3, minmax(320px, 1fr));
+  grid-template-rows: 1fr 320px;
+  grid-template-columns: repeat(3,1fr);
 }
 
 .container {

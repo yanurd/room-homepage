@@ -20,14 +20,109 @@ body {
   box-sizing: border-box;
 }
 
-header {
-  position: absolute;
-}
 nav {
-  margin: 5rem 0 0 3rem;
   font-size: 1.6rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 12rem;
 }
 
+.menu-btn {
+  display: none;
+}
+
+.menu-icon {
+  position: absolute;
+  left: 5%;
+  cursor: pointer;
+  padding: 25px;
+}
+
+.menu-icon .navicon {
+  height: 2px;
+  display: block;
+  position: relative;
+  background: var(--white);
+  transition: background 0.3 ease-out;
+  width: 25px;
+}
+
+.navicon::after,
+.navicon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  height: 2px;
+  width: inherit;
+  transition: all 0.3s ease-out;
+}
+.navicon::after {
+  top: -7px;
+}
+
+.navicon::before {
+  top: 7px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .navicon::before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon::after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon::after,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon::before {
+  top: 0;
+}
+.menu {
+  transition: all .2s ease-out;
+}
+.menu-btn:checked ~ .menu {
+  background: var(--white);
+  width: 100%;
+  height: inherit;
+  transition: all .3s ease-in;
+}
+.menu-btn:checked ~ .menu ~ main{
+  opacity: 0.5;
+}
+
+.menu-btn:checked ~ .menu a:first-child {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  display: flex;
+  flex-direction: row;
+  color: var(--black);
+  font-size: 1.2rem;
+}
+.menu-btn:checked ~ .menu .underline {
+  display: initial;
+  position: relative;
+  left: 22%;
+  top: 29%;
+  font-size: 1.3rem;
+  padding: 2rem 1rem;
+}
+.menu-btn:checked ~ .menu .underline::after,
+.menu-btn:checked ~ .menu .underline::before{
+  border-bottom: 2px solid var(--very-dark-gray);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon::after,
+.menu-btn:checked ~ .menu-icon .navicon::before {
+  background: black;
+}
 nav ul {
   list-style: none;
 }
@@ -38,7 +133,10 @@ nav ul a {
   color: var(--white);
   text-decoration: none;
 }
-
+.underline {
+  display: none;
+  color: var(--black);
+}
 .underline::after {
   display: block;
   padding-bottom: 1rem;
@@ -50,8 +148,8 @@ nav ul a {
 
 main {
   display: grid;
-  grid-template: 
-    repeat(auto-fit, 1fr) / 
+  grid-template:
+    repeat(auto-fit, 1fr) /
     repeat(auto-fit, 1fr);
 }
 
@@ -126,8 +224,8 @@ main {
 
 .bottom-middle h2 {
   font-size: 1.2rem;
-  letter-spacing: .5rem;
-  margin: 2rem 0
+  letter-spacing: 0.5rem;
+  margin: 2rem 0;
 }
 
 .bottom-middle p {
