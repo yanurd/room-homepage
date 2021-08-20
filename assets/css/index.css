@@ -28,6 +28,7 @@ nav {
   width: 100%;
   align-items: center;
   height: 12rem;
+  z-index: 1;
 }
 
 .menu-btn {
@@ -83,17 +84,12 @@ nav {
 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::before {
   top: 0;
 }
-.menu {
-  transition: all .2s ease-out;
-}
+
 .menu-btn:checked ~ .menu {
   background: var(--white);
   width: 100%;
   height: inherit;
   transition: all .3s ease-in;
-}
-.menu-btn:checked ~ .menu ~ main{
-  opacity: 0.5;
 }
 
 .menu-btn:checked ~ .menu a:first-child {
@@ -154,7 +150,10 @@ main {
     repeat(auto-fit, 1fr) /
     repeat(auto-fit, 1fr);
 }
-
+.main {
+  opacity: 0.7;
+  transition: opacity .3s ease-out;
+}
 .container-img {
   height: 100%;
 }
