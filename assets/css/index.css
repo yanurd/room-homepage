@@ -32,7 +32,7 @@ nav {
 }
 
 a{
-  --webkit-tap-hightlight-color: transparent;
+  -webkit-tap-hightlight-color: transparent;
 }
 
 .menu-btn {
