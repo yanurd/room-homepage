@@ -4,6 +4,26 @@ main {
   grid-template-columns: repeat(3,1fr);
 }
 
+/* Menu  */
+.menu-icon {
+  display: none;
+}
+
+nav {
+  justify-content: space-evenly;
+}
+.menu {
+  display: flex;
+  position: absolute;
+  left: 3%;
+}
+
+.underline {
+  display: inline-block;
+  color: var(--white)
+}
+
+
 .container {
   grid-area: 1 / 1 / 1 / 3;
   display: flex;
